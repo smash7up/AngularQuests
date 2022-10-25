@@ -1,1 +1,44 @@
-<p>signup works!</p>
+<form #signup="ngForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+      <label for="email-user">email</label>
+      <input id="email-user" name="email-user" type="email" [(ngModel)]="model.email" #email="ngModel" required email>
+    </fieldset>
+
+    <div *ngIf="email.errors">
+        <span *ngIf="email.errors['required']">Le mail est requis</span>
+        <span *ngIf="email.errors['email']">L'email est invalide</span>
+      </div>
+
+    <fieldset>
+      <label for="firstname-user">firstname</label>
+      <input id="firstname-user" name="firstname-user" type="text" [(ngModel)]="model.firstname" #firstname="ngModel" required minlength="3" maxlength="15">
+    </fieldset>
+
+    <div *ngIf="firstname.errors">
+        <span *ngIf="firstname.errors['required']">Le prénom est requis</span>
+        <span *ngIf="firstname.errors['minlength']">La longueur minimale doit être supérieure à 2</span>
+        <span *ngIf="firstname.errors['maxlength']">La longueur maximale doit être inférieure à 16</span>
+      </div>
+
+    <fieldset>
+      <label for="lastname-user">lastname</label>
+      <input id="lastname-user" name="lastname-user" type="text" [(ngModel)]="model.lastname" #lastname="ngModel" required minlength="3" maxlength="15">
+    </fieldset>
+
+    <div *ngIf="lastname.errors">
+        <span *ngIf="lastname.errors['required']">Le nom est requis</span>
+        <span *ngIf="lastname.errors['minlength']">La longueur minimale doit être supérieure à 2</span>
+        <span *ngIf="lastname.errors['maxlength']">La longueur maximale doit être inférieure à 16</span>
+      </div>
+
+    <fieldset>
+      <label for="password-user">password</label>
+      <input id="password-user" name="password-user" type="password" [(ngModel)]="model.password" #password="ngModel" required>
+    </fieldset>
+
+    <div *ngIf="password.errors">
+        <span *ngIf="password.errors['required']">Le mot de passe est requis</span>
+      </div>
+
+    <button type="submit">Inscription</button>
+</form>
