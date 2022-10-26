@@ -11,6 +11,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { MenuComponent } from './menu/menu.component';
 import { SignupComponent } from './signup/signup.component';
 import { ROUTES } from './app.routes';
+import { DeveloperComponent } from './developer/developer.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ROUTES } from './app.routes';
     UserProfileComponent,
     MenuComponent,
     SignupComponent,
+    DeveloperComponent,
+    SkillComponent,
   ],
   imports: [
     BrowserModule,

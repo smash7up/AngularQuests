@@ -1,0 +1,10 @@
+<ul  *ngFor="let dev of devs">
+    <li class="developers-list">
+      <p>{{ dev.lastname }}</p>
+      <p>{{ dev.firstname }}</p>
+      <p>{{ dev.age }}</p>
+      <p>{{ dev.gender }}</p>
+      <p>{{ dev.bio }}</p>
+    </li>
+    <app-skill *ngFor="let skill of dev.skills" [skill]="skill"></app-skill>
+  </ul>
