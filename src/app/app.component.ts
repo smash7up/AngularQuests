@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Dylan';
+
+  onomatopiaList: Array<string> = [];
+  defaultOnomatopia: string = "";
+
+  onReceiveNewOnomatopia(e: string): void {
+    this.onomatopiaList.push(e);
+  }
 }

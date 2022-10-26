@@ -1,1 +1,7 @@
-<app-developer></app-developer>
+<ul>
+    <li *ngFor="let sound of onomatopiaList">{{ sound }}</li>
+  </ul>
+  
+  <app-create-onomatopia
+    (sendOnomatopia)="onReceiveNewOnomatopia($event)"
+  ></app-create-onomatopia>

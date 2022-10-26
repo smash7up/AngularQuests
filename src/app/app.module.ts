@@ -13,6 +13,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ROUTES } from './app.routes';
 import { DeveloperComponent } from './developer/developer.component';
 import { SkillComponent } from './skill/skill.component';
+import { CreateOnomatopiaComponent } from './create-onomatopia/create-onomatopia.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SkillComponent } from './skill/skill.component';
     SignupComponent,
     DeveloperComponent,
     SkillComponent,
+    CreateOnomatopiaComponent,
   ],
   imports: [
     BrowserModule,
