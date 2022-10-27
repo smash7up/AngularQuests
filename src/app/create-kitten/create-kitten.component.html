@@ -1,0 +1,32 @@
+<form #myForm="ngForm" (ngSubmit)="!name.errors &&
+!race.errors &&
+!date.errors && !photo.errors &&createKitten()">
+  <label for="nom">Nom :</label>
+  <input id="nom" type=" text " name="nom" [(ngModel)]="kitten.name" #name="ngModel" required/>
+  <div *ngIf="name.errors && myForm.submitted">
+    <span *ngIf="name.errors['required']">Le nom est requis</span>
+  </div>
+  <label for="race ">Race :</label>
+  <input id="race " type=" text " name="race" [(ngModel)]="kitten.race" #race="ngModel" required/>
+  <div *ngIf="race.errors && myForm.submitted">
+    <span *ngIf="race.errors['required']">La race est requis</span>
+  </div>
+  <label for="date de naissance ">Date de naissance :</label>
+  <input
+    id="date de naissance "
+    type=" text "
+    name="date de naissance"
+    [(ngModel)]="kitten.birthday"
+    #date="ngModel"
+    required
+  />
+  <div *ngIf="date.errors && myForm.submitted">
+    <span *ngIf="date.errors['required']">La date est requis</span>
+  </div>
+  <label for="photo ">Photo :</label>
+  <input id="photo  " type=" text " name="photo " [(ngModel)]="kitten.photo" #photo="ngModel" required/>
+  <div *ngIf="photo.errors && myForm.submitted">
+    <span *ngIf="photo.errors['required']">La date est requis</span>
+  </div>
+  <button type="submit">envoyer</button>
+</form>

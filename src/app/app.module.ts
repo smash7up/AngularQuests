@@ -14,6 +14,9 @@ import { ROUTES } from './app.routes';
 import { DeveloperComponent } from './developer/developer.component';
 import { SkillComponent } from './skill/skill.component';
 import { CreateOnomatopiaComponent } from './create-onomatopia/create-onomatopia.component';
+import { CreateKittenComponent } from './create-kitten/create-kitten.component';
+import { ListKittenComponent } from './list-kitten/list-kitten.component';
+import { UserKittenComponent } from './user-kitten/user-kitten.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { CreateOnomatopiaComponent } from './create-onomatopia/create-onomatopia
     DeveloperComponent,
     SkillComponent,
     CreateOnomatopiaComponent,
+    CreateKittenComponent,
+    ListKittenComponent,
+    UserKittenComponent,
   ],
   imports: [
     BrowserModule,
